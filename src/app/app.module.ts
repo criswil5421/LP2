@@ -10,12 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
 
 const appRoutes: Routes = [
  { path: '', component: HomeComponent },
  { path: 'products', component: ProductListComponent },
  { path: 'products/:id', component: ProductDetailsComponent },
  { path: 'cart', component: CartComponent },
+ { path: 'login', component: LoginComponent },
+ { path: 'register', component: RegisterComponent },
  { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -25,7 +29,9 @@ const appRoutes: Routes = [
    HomeComponent,
    PageNotFoundComponent,
    ProductDetailsComponent,
-   CartComponent
+   CartComponent,
+   LoginComponent,
+   RegisterComponent
  ],
  imports: [
    BrowserModule,
